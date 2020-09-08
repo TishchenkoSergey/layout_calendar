@@ -4,9 +4,7 @@
   margin: $size auto;
   width: 7 * $size + 7px;
 
-  div {
-    position: relative;
-
+  &__day {
     display: flex;
     justify-content: center;
     align-items: center;
