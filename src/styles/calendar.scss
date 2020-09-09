@@ -2,15 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   margin: $size auto;
-  width: 7 * $size + 7px;
-
-  &__day {
+  width: $daysCount * $size + 7px;
+  
+  & > div {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-top: 1px;
-    margin-left: 1px;
+    margin-top: $sizeGap;
+    margin-left: $sizeGap;
     width: $size;
     height: $size;
 
@@ -30,13 +30,13 @@
       content: "#{$i}";
     }
   }
-  
+
   @each $day, $num in $days {
     &-#{$day} div:first-child {
       margin-left: $size * $num + $num +1;
     }
   }
-  
+
   @for $i from 28 through 31 {
     &-#{$i} div:nth-child(#{$i}) ~ div {
       display: none;
